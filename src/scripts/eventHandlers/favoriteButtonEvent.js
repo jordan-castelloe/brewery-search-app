@@ -12,9 +12,11 @@
 
 import domPrinter from '../domPrinter.js'
 
+// This will store our favorited breweries
+// Private variable to this module, not accessible anywhere outside this module
+const myFavorites = [];
 const favoriteButtonEventHandler = {
-    // This will store our favorited breweries
-  myFavorites: [],
+
   // This method accepts a single parameter- the breweries that came back from the API. The brewries from the API will be stored in an array. We'll need to dig into this array to get the brewery that the user clicked on.
   addEventListenersToFavoriteButtons: function(breweriesFromAPI) {
       // Select all the save buttons and loop through them
@@ -30,12 +32,12 @@ const favoriteButtonEventHandler = {
         const thingToPrint = breweriesFromAPI[favoriteId];
 
         // Once we have the brewery object, we can add it to our favorites array
-        this.myFavorites.push(thingToPrint);
+        myFavorites.push(thingToPrint);
 
         // Now we reuse the method we already wrote to print an array of breweries to the DOM.
         domPrinter.printBreweryList(
           "My Favorites",
-          this.myFavorites,
+          myFavorites,
           "favorites"
         );
       });

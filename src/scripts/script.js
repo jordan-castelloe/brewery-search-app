@@ -4,8 +4,12 @@
 
 // Add event listener to search button
 
-import searchEventHandler from "./eventHandlers/searchEvent.js"
+import searchHandler from "./eventHandlers/searchEvent.js"
 
 document
   .querySelector("#search-btn")
-  .addEventListener("click", searchEventHandler.searchForBreweries);
+  .addEventListener("click", searchHandler.searchForBreweries);
+
+
+  // This won't work! the favorites array is stored in a module and isn't being exported
+//   console.log("my favorites from favoriteButtonEventHandler", myFavorites)
