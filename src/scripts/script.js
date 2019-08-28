@@ -11,5 +11,6 @@ document
   .addEventListener("click", searchHandler.searchForBreweries);
 
 
+
   // This won't work! the favorites array is stored in a module and isn't being exported
 //   console.log("my favorites from favoriteButtonEventHandler", myFavorites)
