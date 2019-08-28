@@ -18,3 +18,5 @@ const domPrinter = {
     document.querySelector(`#${containerId}`).innerHTML = htmlString;
   }
 };
+
+export default domPrinter;

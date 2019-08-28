@@ -10,7 +10,7 @@
 
 // We're going to use that id to figure out the index of the brewery they clicked on in the original array. Then we're going to use it to dig into the array, get that same brewery object that they clicked on, and push it into the myFavorites array.
 
-
+import domPrinter from '../domPrinter.js'
 
 const favoriteButtonEventHandler = {
     // This will store our favorited breweries
@@ -42,5 +42,7 @@ const favoriteButtonEventHandler = {
     });
   }
 };
+
+export default favoriteButtonEventHandler
 
 // A note about event delegation: We have to add the event listener to each favorite button directly because we need to access the data that's coming back from the API. This function will run EVERY TIME we click "search". If we added the event listener to the "#container" and tried to use event delegation, it would keep adding event listeners every time we searched and we'd be doubling up.

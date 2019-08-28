@@ -5,3 +5,5 @@ const apiManager = {
       `https://api.openbrewerydb.org/breweries?by_state=${searchInputParam}`
     ).then(response => response.json())
 };
+
+export default apiManager;

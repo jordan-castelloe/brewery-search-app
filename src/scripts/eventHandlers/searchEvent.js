@@ -1,3 +1,7 @@
+import domPrinter from '../domPrinter.js'
+import apiManager from '../apiManager.js'
+import favoriteButtonEventHandler from './favoriteButtonEvent.js'
+
 const searchEventHandler = {
   searchForBreweries: () => {
       // Get the user's input
@@ -20,3 +24,5 @@ const searchEventHandler = {
     });
   }
 };
+
+export default searchEventHandler;
